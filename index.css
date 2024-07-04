@@ -20,7 +20,7 @@
   justify-content: center;
 }
 .card > .tab {
-  width: 1440px;
+  width: 100%;
   display: flex;
 }
 .card > .tab > .item {
@@ -34,6 +34,11 @@
   align-items: center;
   color: #969696;
   cursor: pointer;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
 }
 .card > .tab > .item.active {
   color: #333;
@@ -67,7 +72,7 @@
   font-size: 32px;
   outline: none;
   background: #f1ece6;
-}
+} 
 .main > .container > .form > .input::placeholder {
   color: #969696;
   font-weight: 300;
@@ -80,6 +85,15 @@
   font-size: 38px;
   border: none;
   cursor: pointer;
+  transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+}
+.main > .container > .form > .btn:disabled {
+  background: #cdcdcd;
+  cursor: not-allowed;
 }
 .main > .container > .list {
   background: #f1ece6;
@@ -92,13 +106,19 @@
   padding: 0 40px;
   display: flex;
   flex-direction: column;
+  gap: 77px;
 }
-.main > .container > .list > .item {
+.main > .container > .list > .content {
+  display: flex;
+  flex-direction: column;
+}
+.main > .container > .list > .content > .item {
   display: flex;
   height: 88px;
   align-items: center;
+  cursor: pointer;
 }
-.main > .container > .list > .item > .text {
+.main > .container > .list > .content > .item > .text {
   flex-grow: 1;
   height: 100%;
   font-size: 32px;
@@ -109,15 +129,14 @@
   border-bottom: 1px solid #76b7cd;
   padding: 0 20px;
 }
-.main > .container > .list > .item > .remove {
+.main > .container > .list > .content > .item > .remove {
   cursor: pointer;
 }
-.main > .container > .list > .item.checked > .text {
+.main > .container > .list > .content > .item.checked > .text {
   text-decoration: line-through;
   color: #c2c2c2;
 }
 .main > .container > .list > .clear {
-  margin-top: 77px;
   display: flex;
   justify-content: flex-end;
 }
@@ -133,5 +152,5 @@
   color: #d98326;
   font-size: 24px;
   font-weight: 300;
-  margin-right: 50px;
+  margin-right: 36px;
 }
